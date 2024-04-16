@@ -34,7 +34,7 @@ export const deleteTodo = async(id)=>{
 export const updateTodo = async(id, text)=>{
   console.log('Updating', id, text);
   try{
-      const response = await axios.put(`${URL}/updateTodo/${id}`, {text})
+      const response = await axios.put(`${URL}/updateTodo/${id}`,{text})
       return response.data;
   }catch(e){
       console.log('Error updating by api.js', e);

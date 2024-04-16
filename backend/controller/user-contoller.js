@@ -37,7 +37,7 @@ export const updateTodo = async (req, res) => {
     const { text } = req.body;
     try {
         console.log("updatedTodo before try",id,text);
-        const updatedTodo = await Todo.findByIdAndUpdate(id, { text }, { new: true });
+        const updatedTodo = await Todo.findByIdAndUpdate(id,  text , { new: true });
         console.log("updatedTodo",updatedTodo)
         res.status(200).json(updatedTodo);
     } catch (err) {
